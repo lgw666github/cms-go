@@ -1,0 +1,12 @@
+services: 
+  db: 
+    container_name: cmsMysql 
+    image: mysql:8.0 
+    restart: always 
+    environment:
+     MYSQL_ROOT_PASSWORD: demo 
+     MYSQL_DATABASE: cms 
+    ports: 
+     - "3316:3306" 
+  # volumes: 
+  #   - ./data/db:/var/lib/mysql
